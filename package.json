@@ -1,0 +1,25 @@
+{
+  "name": "recurrent_names",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "test:watch": "./node_modules/.bin/jest --watchAll"
+  },
+  "engines": {
+    "node": "9.4.0"
+  },
+  "dependencies": {
+    "node-cityhash": "https://github.com/dark0dave/cityhash.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.0"
+  },
+  "jest": {
+    "testRegex": ".*\\.test\\.js"
+  }
+}
