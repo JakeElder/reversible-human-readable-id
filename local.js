@@ -2,7 +2,7 @@ let store = {};
 
 const getItem = key => (key in store ? store[key] : null)
 
-const getKey = (lookupValue) => {
+const getByValue = (lookupValue) => {
   let resultValue;
   store.forEach((key, value) => {
     if (lookupValue === value) {
@@ -32,7 +32,7 @@ const clear = () => {
 
 module.exports = {
   getItem,
-  getKey,
+  getByValue,
   setItem,
   removeItem,
   clear
