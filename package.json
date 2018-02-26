@@ -1,6 +1,6 @@
 {
   "name": "recurrent_names",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Readable recurring names fo uuids",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/dark0dave/recurrent_names#readme",
   "dependencies": {
-    "node-cityhash": "https://github.com/dark0dave/cityhash.git"
+    "cityhash-js": "^0.0.1"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
