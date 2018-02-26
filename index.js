@@ -1,16 +1,17 @@
 const animals = require('./assets/animals');
 const adjectives = require('./assets/adjectives');
 const scientists = require('./assets/scientists');
-const local = require('./local');
+const local = require('./local.js');
 const hasher = require('node-cityhash');
 
 function generateHR(hash) {
-  const count = hash[0];
-  const adjective = adjectives[hash.slice(1, 2)];
-  const animal = animals[hash.slice(3, 4)];
-  const scientist = scientists[hash.slice(5, 6)];
+  const adjective = adjectives[Number(hash.slice(1, 3))];
+  const animal = animals[Number(hash.slice(3, 5))];
+  const scientist = scientists[Number(hash.slice(5, 7))];
 
-  return [adjective, count, animal, scientist].join('-');
+  const arr = [adjective, scientist, animal].filter(x => x);
+
+  return arr.join('-');
 }
 
 // Access functions
@@ -24,7 +25,7 @@ const saveHR = (id) => {
 const getId = name => local.getByValue(name);
 
 function getHR(id) {
-  return local.getKey(id) || saveHR(id);
+  return local.getItem(id) || saveHR(id);
 }
 
 module.exports = {

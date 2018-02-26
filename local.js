@@ -4,8 +4,8 @@ const getItem = key => (key in store ? store[key] : null);
 
 const getByValue = (lookupValue) => {
   let resultValue;
-  store.forEach((key, value) => {
-    if (lookupValue === value) {
+  Object.keys(store).forEach((key) => {
+    if (lookupValue === store[key]) {
       resultValue = key;
     }
   });
