@@ -4,10 +4,26 @@ const scientists = require('./assets/scientists');
 const local = require('./local.js');
 const hasher = require('node-cityhash');
 
+// Helpers
+function parser(stringNumber) {
+  // Dashes seem to be present in hash lib
+  // This means that the name arrays length needs to be at least 119
+  if (stringNumber.indexOf('-') > -1) {
+    const indexDash = stringNumber.indexOf('-');
+    const indexOfOther = indexDash ^ 1;
+    const newStringNumber = String(10 + indexDash) + stringNumber[indexOfOther];
+    return Number(newStringNumber);
+  }
+  if (Number(stringNumber)) {
+    return Number(stringNumber);
+  }
+  return NaN;
+}
+
 function generateHR(hash) {
-  const adjective = adjectives[Number(hash.slice(1, 3))];
-  const animal = animals[Number(hash.slice(3, 5))];
-  const scientist = scientists[Number(hash.slice(5, 7))];
+  const adjective = adjectives[parser(hash.slice(1, 3))];
+  const animal = animals[parser(hash.slice(3, 5))];
+  const scientist = scientists[parser(hash.slice(5, 7))];
 
   const arr = [adjective, scientist, animal].filter(x => x);
 
