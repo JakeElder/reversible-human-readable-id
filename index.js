@@ -10,7 +10,7 @@ function generateHR(hash) {
   const animal = animals[hash.slice(3, 4)];
   const scientist = scientists[hash.slice(5, 6)];
 
-  return [count, adjective, animal, scientist].join('-');
+  return [adjective, count, animal, scientist].join('-');
 }
 
 // Access functions

@@ -1,5 +1,8 @@
 {
   "name": "recurrent_names",
+  "version": "0.0.1",
+  "description": "Readabe reccouring names for uuids",
+  "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest",
     "test:watch": "./node_modules/.bin/jest --watchAll"
@@ -7,6 +10,16 @@
   "engines": {
     "node": "9.4.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dark0dave/recurrent_names.git"
+  },
+  "author": "dark0dave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dark0dave/recurrent_names/issues"
+  },
+  "homepage": "https://github.com/dark0dave/recurrent_names#readme",
   "dependencies": {
     "node-cityhash": "https://github.com/dark0dave/cityhash.git"
   },
