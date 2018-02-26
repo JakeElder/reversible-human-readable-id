@@ -1,7 +1,7 @@
 {
   "name": "recurrent_names",
   "version": "0.0.1",
-  "description": "Readabe reccouring names for uuids",
+  "description": "Readable recurring names fo uuids",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest",

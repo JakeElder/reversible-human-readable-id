@@ -7,6 +7,7 @@ const hasher = require('node-cityhash');
 // Helpers
 function parser(stringNumber) {
   // Dashes seem to be present in hash lib
+  // I am going to shift the number by a factor of 10 or 11 given the position
   // This means that the name arrays length needs to be at least 119
   if (stringNumber.indexOf('-') > -1) {
     const indexDash = stringNumber.indexOf('-');
