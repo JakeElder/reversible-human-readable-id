@@ -1,6 +1,6 @@
-# Recurrent Names
-[![Build Status](https://travis-ci.org/dark0dave/recurrent_names.svg?branch=master)](https://travis-ci.org/dark0dave/recurrent_names)
-[![Coverage Status](https://coveralls.io/repos/github/dark0dave/recurrent_names/badge.svg?branch=master)](https://coveralls.io/github/dark0dave/recurrent_names?branch=master)
+# Reversible-human-readable-id
+[![Build Status](https://travis-ci.org/dark0dave/reversible-human-readable-id.svg?branch=master)](https://travis-ci.org/dark0dave/reversible-human-readable-id)
+[![Coverage Status](https://coveralls.io/repos/github/dark0dave/reversible-human-readable-id/badge.svg?branch=master)](https://coveralls.io/github/dark0dave/reversible-human-readable-id?branch=master)
 
 Takes a string, converts it to a 128 bit hash,
 converts the hash to a freindly name and stores the result in a
@@ -17,12 +17,12 @@ for storing locally.
 
 npm
 ````
-npm install recurrent_names
+npm install reversible-human-readable-id
 ````
 
 yarn
 ````
-yarn add recurrent_names
+yarn add reversible-human-readable-id
 ````
 
 ## Example

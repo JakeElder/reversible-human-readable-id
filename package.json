@@ -1,5 +1,5 @@
 {
-  "name": "recurrent_names",
+  "name": "reversible-human-readable-id",
   "version": "0.1.0",
   "description": "Readable recurring names fo uuids",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dark0dave/recurrent_names.git"
+    "url": "git+https://github.com/dark0dave/reversible-human-readable-id.git"
   },
   "author": "dark0dave",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dark0dave/recurrent_names/issues"
+    "url": "https://github.com/dark0dave/reversible-human-readable-id/issues"
   },
-  "homepage": "https://github.com/dark0dave/recurrent_names#readme",
+  "homepage": "https://github.com/dark0dave/reversible-human-readable-id#readme",
   "dependencies": {
     "cityhash-js": "^0.0.1"
   },
