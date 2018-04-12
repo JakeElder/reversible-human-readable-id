@@ -4,7 +4,7 @@ describe('cityhash', () => {
   describe('getHR', () => {
     it('should return a human readable name', () => {
       const id = '9028j9ko39i53klf';
-      expect(getHR(id)).toBe('bacterial-easley-alizarin-crimson');
+      expect(getHR(id)).toBe('charming-alizarin-crimson-turner');
     });
     it('should always return the same human readable name', () => {
       const id = '9028j9ko39i53klf';
