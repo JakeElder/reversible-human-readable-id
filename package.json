@@ -1,6 +1,6 @@
 {
   "name": "reversible-human-readable-id",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Readable recurring names fo uuids",
   "main": "index.js",
   "scripts": {
