@@ -1,6 +1,6 @@
 {
   "name": "reversible-human-readable-id",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Readable recurring names fo uuids",
   "main": "index.js",
   "scripts": {
@@ -18,12 +18,13 @@
   },
   "homepage": "https://github.com/dark0dave/reversible-human-readable-id#readme",
   "dependencies": {
-    "cityhash-js": "^0.0.1"
+    "sha.js": "^2.4.11"
   },
   "devDependencies": {
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
-    "jest": "^22.4.0"
+    "jest": "^22.4.0",
+    "jest-cli": "^22.4.3"
   }
 }

@@ -2,27 +2,29 @@ const animals = require('./assets/animals');
 const adjectives = require('./assets/adjectives');
 const scientists = require('./assets/scientists');
 const local = require('./local.js');
-const hasher = require('cityhash-js');
+const shajs = require('sha.js');
 
 // Helpers
 function parser(stringNumber) {
-  return Number(stringNumber);
+  return parseInt(stringNumber, 16);
 }
 
 function generateHR(hash) {
-  const adjective = adjectives[parser(hash.slice(1, 3))];
-  const animal = animals[parser(hash.slice(3, 5))];
-  const scientist = scientists[parser(hash.slice(5, 7))];
+  const adjective = adjectives[parser(hash.slice(1, 2))];
+  const animal = animals[parser(hash.slice(2, 3))];
+  const scientist = scientists[parser(hash.slice(3, 4))];
 
-  const arr = [adjective, scientist, animal].filter(x => x);
+  const number = parser(hash.slice(7, 8));
+  const arr = [adjective, scientist, animal, number].filter(x => x);
 
   return arr.join('-');
 }
 
 // Access functions
 const saveHR = (id) => {
-  const hash = hasher.hash128(id);
-  const humanReadable = generateHR(hash);
+  const hash = shajs('sha256').update(id).digest('hex');
+
+  const humanReadable = generateHR(hash.toString());
   local.setItem(id, humanReadable);
   return humanReadable;
 };
