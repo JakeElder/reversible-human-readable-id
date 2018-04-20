@@ -1,8 +1,11 @@
 const adjectives = require('./assets/adjectives.js');
 const lastNames = require('./assets/lastNames.js');
 const colors = require('./assets/colors.js');
+const scientists = require('./assets/scientists.js');
 const local = require('./local.js');
 const shajs = require('sha.js');
+
+const colorsAndScientists = colors.concat(scientists);
 
 // Helpers
 function parser(stringNumber) {
@@ -11,7 +14,7 @@ function parser(stringNumber) {
 
 function generateHR(hash) {
   const adjective = adjectives[parser(hash.slice(1, 3)) * 2];
-  const color = colors[parser(hash.slice(3, 5)) * 2];
+  const color = colorsAndScientists[parser(hash.slice(3, 5)) * 2];
   const lastName = lastNames[parser(hash.slice(5, 7))];
 
   const arr = [adjective, color, lastName].filter(x => x);
