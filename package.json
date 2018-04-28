@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dark0dave/reversible-human-readable-id#readme",
   "dependencies": {
+    "local-storage": "^1.4.2",
     "sha.js": "^2.4.11"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
+const shajs = require('sha.js');
+const ls = require('local-storage');
 const adjectives = require('./assets/adjectives.js');
 const lastNames = require('./assets/lastNames.js');
 const colors = require('./assets/colors.js');
 const scientists = require('./assets/scientists.js');
-const local = require('./local.js');
-const shajs = require('sha.js');
 
 const colorsAndScientists = colors.concat(scientists);
 
@@ -27,14 +27,15 @@ const saveHR = (id) => {
   const hash = shajs('sha256').update(id).digest('hex');
 
   const humanReadable = generateHR(hash.toString());
-  local.setItem(id, humanReadable);
+  ls(`hri:id>human:${id}`, humanReadable);
+  ls(`hri:human>id:${humanReadable}`, id);
   return humanReadable;
 };
 
-const getId = name => local.getByValue(name);
+const getId = name => ls(`hri:human>id:${name}`)
 
 function getHR(id) {
-  return local.getItem(id) || saveHR(id);
+  return ls(`hri:id>human:${id}`) || saveHR(id);
 }
 
 module.exports = {

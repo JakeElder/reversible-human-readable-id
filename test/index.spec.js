@@ -24,7 +24,7 @@ describe('cityhash', () => {
 
     it('should return null if not found', () => {
       const id = '9028j9ko39i53klf';
-      expect(getId(id)).toBe(undefined);
+      expect(getId(id)).toBe(null);
     });
   });
   describe('Collision likelyhood', () => {
